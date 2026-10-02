@@ -591,6 +591,40 @@
     }
 
 
+    /* 05: 전체 폭 가로형 연구 항목 */
+
+    .research-item.research-item-wide {
+
+      grid-column: 1 / -1;
+
+      border-left: none;
+
+      border-top: 1px solid var(--line);
+
+      padding: 38px 0 42px;
+
+      min-height: 0;
+
+      display: grid;
+
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+
+      gap: 30px;
+
+    }
+
+
+    @media (min-width: 1101px) {
+
+      .research-item:nth-child(4) {
+
+        padding-right: 0;
+
+      }
+
+    }
+
+
 
     /* =========================================================
        DATA & ANALYTICAL APPROACHES
@@ -1294,6 +1328,13 @@
       }
 
 
+      .research-item.research-item-wide {
+
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+
+      }
+
+
       .approach-grid {
 
         grid-template-columns: repeat(3, 1fr);
@@ -1418,6 +1459,13 @@
         border-left: none;
 
         border-top: 1px solid var(--line);
+
+      }
+
+
+      .research-item.research-item-wide {
+
+        display: block;
 
       }
 
@@ -1911,6 +1959,8 @@
           PRECISE Lab은 실제 임상환경에서의 약물치료 효과와 안전성을
           보다 정확하게 이해하고 개인별로 최적화된 약물치료 전략을 제시하기 위해
           약물역학, 약물감시, 약물유전체학 및 약동학 연구를 수행합니다.
+          또한 이러한 근거가 실제 환자 진료로 이어질 수 있도록
+          약사 직능 개발과 관련된 연구에도 관심을 두고 있습니다.
 
         </p>
 
@@ -2090,6 +2140,60 @@
           Dose Optimization ·
           Therapeutic Drug Monitoring ·
           Personalized Dosing
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <!-- 05 PHARMACY PRACTICE -->
+
+      <div class="research-item research-item-wide">
+
+
+        <div>
+
+          <div class="research-number">
+
+            05
+
+          </div>
+
+
+          <h3>
+
+            Pharmacy Practice &amp; Pharmacist Roles
+
+          </h3>
+
+        </div>
+
+
+
+        <div>
+
+          <p>
+
+            약물치료의 근거가 실제 환자 진료로 이어지기 위해서는
+            약사의 전문적 역할이 중요합니다.
+            약사 주도 약료서비스와 의약품 안전관리 체계를 평가하고,
+            약사 직능의 개발과 확대 및 관련 제도 개선에 필요한
+            근거를 마련하는 연구에 관심을 두고 있습니다.
+
+          </p>
+
+
+          <div class="research-keywords">
+
+            Pharmaceutical Care ·
+            Pharmacist-led Services ·
+            Medication Safety Management ·
+            Pharmacy Policy
+
+          </div>
 
         </div>
 
@@ -2311,7 +2415,8 @@
           <p>
 
             실제 임상자료를 활용한 의약품의 안전성 및 효과 평가,
-            약물유전체학, 약물역학, 약물감시 및 약동학 연구
+            약물유전체학, 약물역학, 약물감시, 약동학 및
+            약사 직능 개발 연구
 
             <br><br>
 
@@ -2321,7 +2426,8 @@
             Pharmacogenomics ·
             Pharmacoepidemiology ·
             Pharmacovigilance ·
-            Pharmacokinetics
+            Pharmacokinetics ·
+            Pharmacy Practice
 
             <br><br>
 
@@ -3846,7 +3952,8 @@
           임상약학, 약물치료학,
           real-world evidence,
           약물역학, 약물감시,
-          약물유전체학, 약동학 및
+          약물유전체학, 약동학,
+          약사 직능 개발 및
           의료 데이터 분석에 관심 있는
           학생과 연구자의 참여를 환영합니다.
 
