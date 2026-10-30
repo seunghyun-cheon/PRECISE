@@ -1,0 +1,1716 @@
+
+/* =========================================================
+   BASIC SETTINGS
+========================================================= */
+
+:root {
+
+  --main: #174A45;
+  --main-dark: #103733;
+
+  --accent: #B5844A;
+
+  --text: #202624;
+  --gray: #6F7774;
+
+  --light-gray: #F6F7F6;
+  --line: #E3E7E5;
+  --white: #FFFFFF;
+
+  /* 홈페이지 전체 콘텐츠 폭 */
+  --content-width: 1400px;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+
+body {
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Pretendard",
+    "Noto Sans KR",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: var(--text);
+
+  background: var(--white);
+
+  line-height: 1.7;
+
+  word-break: keep-all;
+
+}
+
+
+a {
+  color: inherit;
+}
+
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+header {
+
+  position: sticky;
+
+  top: 0;
+
+  background: rgba(255,255,255,0.96);
+
+  border-bottom: 1px solid var(--line);
+
+  z-index: 100;
+
+  backdrop-filter: blur(8px);
+
+}
+
+
+.nav {
+
+  max-width: var(--content-width);
+
+  margin: auto;
+
+  padding: 12px 30px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+}
+
+
+/* LOGO */
+
+.brand {
+
+  display: flex;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+
+}
+
+
+.brand img {
+
+  height: 54px;
+
+  width: auto;
+
+  max-width: 280px;
+
+  display: block;
+
+  object-fit: contain;
+
+}
+
+
+.brand-fallback {
+
+  display: none;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: var(--main);
+
+}
+
+
+/* MENU */
+
+.menu {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+}
+
+
+.menu a {
+
+  margin-left: 28px;
+
+  text-decoration: none;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+
+}
+
+
+.menu a:hover {
+
+  color: var(--main);
+
+}
+
+
+.menu a.active {
+
+  color: var(--main);
+
+  box-shadow: 0 2px 0 var(--accent);
+
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  max-width: var(--content-width);
+
+  margin: auto;
+
+  padding: 115px 30px 110px;
+
+  display: grid;
+
+  /*
+    오른쪽 폭을 고정하여
+    왼쪽 제목과 오른쪽 설명 모두 안정적으로 유지
+  */
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    320px;
+
+  gap: 75px;
+
+  align-items: center;
+
+}
+
+
+.hero-label {
+
+  color: var(--accent);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 18px;
+
+}
+
+
+.hero h1 {
+
+  font-size: 64px;
+
+  line-height: 1.05;
+
+  color: var(--main);
+
+  margin-bottom: 28px;
+
+  letter-spacing: -2px;
+
+}
+
+
+/* 제목을 정확히 두 줄로 유지 */
+
+.hero h1 span {
+
+  display: block;
+
+  white-space: nowrap;
+
+}
+
+
+.hero-statement {
+
+  font-size: 27px;
+
+  line-height: 1.5;
+
+  max-width: 800px;
+
+  margin-bottom: 28px;
+
+  font-weight: 600;
+
+}
+
+
+.hero-description {
+
+  color: var(--gray);
+
+  font-size: 16px;
+
+  max-width: 820px;
+
+}
+
+
+.hero-description strong {
+
+  color: var(--text);
+
+}
+
+
+.hero-side {
+
+  border-left: 1px solid var(--line);
+
+  padding-left: 45px;
+
+  min-width: 0;
+
+}
+
+
+.hero-side-title {
+
+  font-size: 12px;
+
+  color: var(--gray);
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+}
+
+
+.hero-fullname {
+
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  margin-bottom: 30px;
+
+}
+
+
+.hero-fullname strong {
+
+  color: var(--accent);
+
+}
+
+
+.hero-institution {
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  color: var(--gray);
+
+}
+
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+section {
+
+  padding: 95px 30px;
+
+}
+
+
+.container {
+
+  max-width: var(--content-width);
+
+  margin: auto;
+
+}
+
+
+.section-header {
+
+  display: grid;
+
+  grid-template-columns: 0.7fr 2fr;
+
+  gap: 60px;
+
+  margin-bottom: 60px;
+
+}
+
+
+.section-label {
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  color: var(--accent);
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+}
+
+
+.section-header h2 {
+
+  font-size: 40px;
+
+  color: var(--main);
+
+  line-height: 1.25;
+
+}
+
+
+.section-intro {
+
+  color: var(--gray);
+
+  margin-top: 16px;
+
+  max-width: 800px;
+
+  font-size: 16px;
+
+}
+
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+
+  background: var(--light-gray);
+
+}
+
+
+.about-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 90px;
+
+}
+
+
+.about-large {
+
+  font-size: 27px;
+
+  line-height: 1.55;
+
+  color: var(--main);
+
+  font-weight: 500;
+
+  max-width: 620px;
+
+}
+
+
+.about-text {
+
+  color: var(--gray);
+
+  font-size: 16px;
+
+  max-width: 650px;
+
+}
+
+
+.about-text p {
+
+  margin-bottom: 18px;
+
+}
+
+
+
+/* =========================================================
+   RESEARCH
+========================================================= */
+
+.research-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid var(--line);
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+
+.research-item {
+
+  padding: 38px 30px 42px;
+
+  min-height: 330px;
+
+}
+
+
+.research-item:first-child {
+
+  padding-left: 0;
+
+}
+
+
+.research-item:last-child {
+
+  padding-right: 0;
+
+}
+
+
+.research-item + .research-item {
+
+  border-left: 1px solid var(--line);
+
+}
+
+
+.research-number {
+
+  font-size: 13px;
+
+  color: var(--accent);
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
+}
+
+
+.research-item h3 {
+
+  font-size: 22px;
+
+  color: var(--main);
+
+  margin-bottom: 15px;
+
+  line-height: 1.35;
+
+}
+
+
+.research-item p {
+
+  color: var(--gray);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+}
+
+
+.research-keywords {
+
+  margin-top: 22px;
+
+  font-size: 12px;
+
+  color: var(--accent);
+
+  line-height: 1.8;
+
+}
+
+
+/* 05: 전체 폭 가로형 연구 항목 */
+
+.research-item.research-item-wide {
+
+  grid-column: 1 / -1;
+
+  border-left: none;
+
+  border-top: 1px solid var(--line);
+
+  padding: 38px 0 42px;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+
+  gap: 30px;
+
+}
+
+
+@media (min-width: 1101px) {
+
+  .research-item:nth-child(4) {
+
+    padding-right: 0;
+
+  }
+
+}
+
+
+
+
+/* 연구 모식도 및 분야별 아이콘 */
+
+.research-framework {
+
+  margin: 0 0 60px;
+
+}
+
+
+.research-framework img {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+}
+
+
+.research-icon {
+
+  display: block;
+
+  width: 120px;
+
+  height: auto;
+
+  margin-bottom: 22px;
+
+}
+
+
+/* =========================================================
+   DATA & ANALYTICAL APPROACHES
+========================================================= */
+
+.approach-area {
+
+  margin-top: 60px;
+
+  padding-top: 30px;
+
+}
+
+
+.approach-title {
+
+  font-size: 19px;
+
+  color: var(--main);
+
+  margin-bottom: 24px;
+
+}
+
+
+.approach-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 16px;
+
+}
+
+
+.approach-item {
+
+  background: var(--light-gray);
+
+  padding: 22px;
+
+  min-height: 120px;
+
+}
+
+
+.approach-item strong {
+
+  display: block;
+
+  color: var(--main);
+
+  font-size: 14px;
+
+  margin-bottom: 7px;
+
+}
+
+
+.approach-item span {
+
+  color: var(--gray);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+}
+
+
+
+/* =========================================================
+   PEOPLE
+========================================================= */
+
+.people {
+
+  background: var(--light-gray);
+
+}
+
+
+/* PI */
+
+.pi-profile {
+
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
+
+  gap: 60px;
+
+  align-items: start;
+
+  padding-bottom: 70px;
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+
+.profile-photo {
+
+  width: 260px;
+
+  height: 335px;
+
+  position: relative;
+
+  background: #DDE5E2;
+
+  overflow: hidden;
+
+}
+
+
+.profile-photo img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+.image-fallback {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #DDE5E2;
+
+  color: var(--main);
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  z-index: 0;
+
+}
+
+
+.pi-profile h3 {
+
+  font-size: 30px;
+
+  color: var(--main);
+
+  margin-bottom: 5px;
+
+}
+
+
+.profile-position {
+
+  color: var(--gray);
+
+  margin-bottom: 25px;
+
+}
+
+
+.profile-section {
+
+  margin-top: 22px;
+
+}
+
+
+.profile-section strong {
+
+  display: block;
+
+  color: var(--main);
+
+  margin-bottom: 6px;
+
+}
+
+
+.profile-section p {
+
+  color: var(--gray);
+
+}
+
+
+
+/* =========================================================
+   MEMBER CARDS
+========================================================= */
+
+.member-area {
+
+  margin-top: 60px;
+
+}
+
+
+.member-heading {
+
+  font-size: 24px;
+
+  color: var(--main);
+
+  margin-bottom: 30px;
+
+}
+
+
+.member-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+
+}
+
+
+.member-card {
+
+  display: grid;
+
+  grid-template-columns: 140px 1fr;
+
+  gap: 25px;
+
+  padding: 25px;
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+}
+
+
+.member-photo {
+
+  width: 140px;
+
+  height: 175px;
+
+  background: #DDE5E2;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+.member-photo img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+.member-fallback {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: var(--main);
+
+  font-weight: 700;
+
+  font-size: 28px;
+
+  z-index: 0;
+
+}
+
+
+.member-info h4 {
+
+  font-size: 21px;
+
+  color: var(--main);
+
+  margin-bottom: 3px;
+
+}
+
+
+.member-role {
+
+  color: var(--accent);
+
+  font-size: 14px;
+
+  margin-bottom: 14px;
+
+}
+
+
+.member-info p {
+
+  color: var(--gray);
+
+  font-size: 14px;
+
+}
+
+
+.member-info strong {
+
+  color: var(--text);
+
+  font-weight: 600;
+
+}
+
+
+
+/* =========================================================
+   PUBLICATIONS
+========================================================= */
+
+.publication-list {
+
+  border-top: 1px solid var(--line);
+
+}
+
+
+.publication-year {
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+
+.publication-year summary {
+
+  list-style: none;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 25px 0;
+
+  color: var(--main);
+
+  user-select: none;
+
+}
+
+
+.publication-year summary::-webkit-details-marker {
+
+  display: none;
+
+}
+
+
+.year-title {
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+}
+
+
+.publication-count {
+
+  margin-left: auto;
+
+  margin-right: 25px;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  color: var(--gray);
+
+}
+
+
+.publication-year summary::after {
+
+  content: "+";
+
+  color: var(--accent);
+
+  font-size: 27px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+}
+
+
+.publication-year[open] summary::after {
+
+  content: "−";
+
+}
+
+
+.publication-year-content {
+
+  padding-bottom: 20px;
+
+}
+
+
+.publication {
+
+  display: grid;
+
+  grid-template-columns: 44px 1fr;
+
+  gap: 20px;
+
+  padding: 21px 0;
+
+  border-top: 1px solid var(--line);
+
+}
+
+
+.pub-number {
+
+  color: var(--accent);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  padding-top: 2px;
+
+}
+
+
+.pub-title {
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+}
+
+
+.pub-title strong {
+
+  color: var(--main);
+
+  font-weight: 700;
+
+}
+
+
+.pub-info {
+
+  color: var(--gray);
+
+  font-size: 14px;
+
+  margin-top: 5px;
+
+}
+
+
+.pub-info em {
+
+  color: var(--text);
+
+}
+
+
+.publication-note {
+
+  margin-top: 18px;
+
+  color: var(--gray);
+
+  font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news-list {
+
+  border-top: 1px solid var(--line);
+
+}
+
+
+.news-item {
+
+  display: grid;
+
+  grid-template-columns: 150px 1fr;
+
+  gap: 30px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+
+.news-date {
+
+  color: var(--accent);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+
+  background: #F1F4F3;
+
+}
+
+
+.contact-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 90px;
+
+}
+
+
+.contact h3 {
+
+  color: var(--main);
+
+  font-size: 24px;
+
+  margin-bottom: 18px;
+
+}
+
+
+.contact p {
+
+  color: var(--gray);
+
+}
+
+
+.contact a {
+
+  color: var(--main);
+
+  text-decoration: none;
+
+}
+
+
+.contact a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  background: var(--main-dark);
+
+  color: #B8C6C2;
+
+  padding: 30px;
+
+  text-align: center;
+
+  font-size: 13px;
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+  .hero {
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      280px;
+
+    gap: 45px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: 52px;
+
+  }
+
+
+  .research-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+  .research-item,
+  .research-item:first-child,
+  .research-item:last-child {
+
+    padding: 34px;
+
+  }
+
+
+  .research-item + .research-item {
+
+    border-left: none;
+
+  }
+
+
+  .research-item:nth-child(even) {
+
+    border-left: 1px solid var(--line);
+
+  }
+
+
+  .research-item:nth-child(n+3) {
+
+    border-top: 1px solid var(--line);
+
+  }
+
+
+  .research-item.research-item-wide {
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+
+  }
+
+
+  .approach-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+
+  .nav {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+  }
+
+
+  .menu {
+
+    justify-content: flex-start;
+
+  }
+
+
+  .menu a {
+
+    margin-left: 0;
+
+    margin-right: 20px;
+
+    margin-bottom: 6px;
+
+  }
+
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 75px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: 46px;
+
+  }
+
+
+  .hero h1 span {
+
+    white-space: normal;
+
+  }
+
+
+  .hero-statement {
+
+    font-size: 23px;
+
+  }
+
+
+  .hero-side {
+
+    border-left: none;
+
+    border-top: 1px solid var(--line);
+
+    padding-left: 0;
+
+    padding-top: 30px;
+
+  }
+
+
+  .section-header,
+  .about-grid,
+  .contact-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .research-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .research-item,
+  .research-item:first-child,
+  .research-item:last-child {
+
+    padding: 32px 0;
+
+    min-height: 0;
+
+  }
+
+
+  .research-item:nth-child(even),
+  .research-item + .research-item {
+
+    border-left: none;
+
+    border-top: 1px solid var(--line);
+
+  }
+
+
+  .research-item.research-item-wide {
+
+    display: block;
+
+  }
+
+
+  .approach-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+  .pi-profile {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .member-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+
+  section {
+
+    padding: 70px 22px;
+
+  }
+
+
+  .nav {
+
+    padding: 10px 22px;
+
+  }
+
+
+  .brand img {
+
+    height: 46px;
+
+  }
+
+
+  .menu a {
+
+    font-size: 13px;
+
+    margin-right: 14px;
+
+  }
+
+
+  .hero {
+
+    padding: 70px 22px 75px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: 39px;
+
+    letter-spacing: -1px;
+
+  }
+
+
+  .hero-statement {
+
+    font-size: 21px;
+
+  }
+
+
+  .section-header h2 {
+
+    font-size: 32px;
+
+  }
+
+
+  .about-large {
+
+    font-size: 22px;
+
+  }
+
+
+  .approach-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .profile-photo {
+
+    width: 220px;
+
+    height: 285px;
+
+  }
+
+
+  .member-card {
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 18px;
+
+    padding: 18px;
+
+  }
+
+
+  .member-photo {
+
+    width: 100px;
+
+    height: 130px;
+
+  }
+
+
+  .publication-year summary {
+
+    padding: 21px 0;
+
+  }
+
+
+  .year-title {
+
+    font-size: 22px;
+
+  }
+
+
+  .publication-count {
+
+    margin-right: 15px;
+
+  }
+
+
+  .publication {
+
+    grid-template-columns: 30px 1fr;
+
+    gap: 10px;
+
+  }
+
+
+  .news-item {
+
+    grid-template-columns: 1fr;
+
+    gap: 4px;
+
+  }
+
+}
+
+
+
+/* =========================================================
+   MULTI-PAGE
+========================================================= */
+
+/* 하위 페이지 첫 섹션 */
+
+.subpage section:first-of-type {
+
+  padding-top: 70px;
+
+  min-height: 70vh;
+
+}
+
+
+/* 홈 요약 블록의 하위 페이지 링크 */
+
+.more-link {
+
+  display: inline-block;
+
+  margin-top: 30px;
+
+  color: var(--main);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow: 0 1px 0 var(--accent);
+
+}
+
+
+.more-link:hover {
+
+  color: var(--accent);
+
+}
