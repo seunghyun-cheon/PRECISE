@@ -27,7 +27,7 @@
 
 ## 연구 모식도·일러스트
 - images/research-framework.svg (1400×620, research.html 소개글 아래와 index.html Research Areas 요약 블록의 <figure class="research-framework">).
-- 홈 상단 장면 일러스트 images/home-hero.svg (1400×560, index.html .hero 안 <figure class="hero-image">).
+- 홈 상단 사진 images/home-hero.jpg (1200×480 실사 사진, index.html .hero 안 <figure class="hero-image">).
 - 분야별 장면 일러스트 images/research-{pe,pv,pgx,pk,practice}.svg (640×440, research.html 각 .research-item의 <figure class="research-image">). 01~05는 세로 목록이며 짝수 항목은 그림이 왼쪽.
 - 스타일: 색을 채운 플랫 장면 일러스트(인물·사물이 있는 장면). 단순 모식도·텍스트 박스 위주나 얇은 선 아이콘 위주는 피한다. 모바일용 별도 그림은 만들지 않고 같은 그림을 축소 표시한다.
 - 색상: --main #174A45, --accent #B5844A, --gray #6F7774, --line #E3E7E5. 보조 틸 #2E6B64 #5E938B #A9C8C2 #DCEAE7 #F2F7F6, 보조 브론즈 #D9B98C #F3E7D6 #8C6334.
