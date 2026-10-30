@@ -823,9 +823,9 @@ section {
 
   display: grid;
 
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 18px;
+  gap: 20px;
 
 }
 
@@ -834,9 +834,9 @@ section {
 
   background: var(--light-gray);
 
-  padding: 28px 26px;
+  padding: 32px 30px;
 
-  min-height: 150px;
+  min-height: 0;
 
 }
 
@@ -847,7 +847,7 @@ section {
 
   color: var(--main);
 
-  font-size: 18px;
+  font-size: 21px;
 
   margin-bottom: 10px;
 
@@ -858,7 +858,7 @@ section {
 
   color: var(--gray);
 
-  font-size: 15px;
+  font-size: 16px;
 
   line-height: 1.7;
 
@@ -1584,11 +1584,6 @@ footer {
   }
 
 
-  .approach-grid {
-
-    grid-template-columns: repeat(3, 1fr);
-
-  }
 
 }
 
