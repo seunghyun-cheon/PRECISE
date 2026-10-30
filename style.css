@@ -843,7 +843,7 @@ section {
 
 /* 연구방법 카드는 브론즈 강조 */
 
-.approach-item:nth-child(n+5) {
+.approach-item:nth-child(n+4) {
 
   border-top-color: var(--accent);
 
