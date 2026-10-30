@@ -454,6 +454,24 @@ header {
 }
 
 
+/* 사진 위에서도 잘 읽히도록 글씨를 진하게 */
+
+.hero-wrap .hero-description,
+.hero-wrap .hero-side-title,
+.hero-wrap .hero-institution {
+
+  color: var(--text);
+
+}
+
+
+.hero-wrap .hero-description {
+
+  font-weight: 500;
+
+}
+
+
 .hero-image {
 
   position: absolute;
