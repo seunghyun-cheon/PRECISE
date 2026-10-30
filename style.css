@@ -355,7 +355,7 @@ header {
 }
 
 
-/* 홈 상단 배경 사진 (워터마크) */
+/* 홈 상단: 왼쪽 글 + 오른쪽 사진 */
 
 .hero-wrap {
 
@@ -375,11 +375,96 @@ header {
 }
 
 
+@media (min-width: 1101px) {
+
+  .hero-wrap .hero {
+
+    grid-template-columns: minmax(0, 700px);
+
+    padding-top: 100px;
+
+    padding-bottom: 100px;
+
+  }
+
+
+  .hero-wrap .hero h1 {
+
+    font-size: 54px;
+
+  }
+
+
+  .hero-wrap .hero-statement {
+
+    font-size: 24px;
+
+  }
+
+}
+
+
+/* PRECISE stands for: 글 아래 가로 배치 */
+
+.hero-wrap .hero-side {
+
+  display: grid;
+
+  grid-template-columns: auto auto;
+
+  justify-content: start;
+
+  column-gap: 50px;
+
+  border-left: none;
+
+  border-top: 1px solid var(--line);
+
+  padding-left: 0;
+
+  padding-top: 28px;
+
+}
+
+
+.hero-wrap .hero-side-title {
+
+  grid-column: 1 / -1;
+
+  margin-bottom: 12px;
+
+}
+
+
+.hero-wrap .hero-fullname {
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 0;
+
+}
+
+
+.hero-wrap .hero-institution {
+
+  align-self: end;
+
+}
+
+
 .hero-image {
 
   position: absolute;
 
-  inset: 0;
+  top: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  width: 48%;
 
   margin: 0;
 
@@ -398,14 +483,10 @@ header {
 
   object-position: right center;
 
-  filter: saturate(0.85) blur(1.5px);
-
-  transform: scale(1.02);
-
 }
 
 
-/* 왼쪽 글 영역은 흰색으로, 오른쪽으로 갈수록 사진이 비치게 */
+/* 사진 왼쪽 경계를 흰색으로 부드럽게 */
 
 .hero-image::after {
 
@@ -415,13 +496,7 @@ header {
 
   inset: 0;
 
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, #FFFFFF 100%),
-    linear-gradient(90deg,
-      #FFFFFF 0%,
-      rgba(255, 255, 255, 0.94) 40%,
-      rgba(255, 255, 255, 0.80) 65%,
-      rgba(255, 255, 255, 0.82) 100%);
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%);
 
 }
 
@@ -1427,6 +1502,33 @@ footer {
   }
 
 
+  .hero-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 380px;
+
+  }
+
+
+  .hero-image::after {
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, #FFFFFF 100%);
+
+  }
+
+
+  .hero-wrap .hero {
+
+    grid-template-columns: minmax(0, 1fr);
+
+    padding-top: 50px;
+
+  }
+
+
   .research-item,
   .research-item:nth-child(even) {
 
@@ -1529,9 +1631,18 @@ footer {
   }
 
 
-  .hero-image::after {
+  .hero-image {
 
-    background: rgba(255, 255, 255, 0.88);
+    height: 240px;
+
+  }
+
+
+  .hero-wrap .hero-side {
+
+    grid-template-columns: 1fr;
+
+    row-gap: 20px;
 
   }
 
