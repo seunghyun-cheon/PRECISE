@@ -30,6 +30,7 @@
 - 홈 상단 사진 images/home-hero.jpg (원본 1983×793 그대로 사용 — 히어로 전체 폭에 깔리므로 1200px 규칙의 예외). index.html의 .hero-wrap 안 <figure class="hero-image">. 데스크톱(1101px 이상)은 사진이 히어로 아래쪽 전체 폭에 깔리고, 흰색 그라데이션으로 왼쪽(글 영역)은 흐린 워터마크·오른쪽은 선명하게 보인다. 1100px 이하는 사진이 글 위 띠로 올라간다. "PRECISE stands for"는 글 아래 가로 배치.
 - 분야별 그림 images/research-{pe,pv,pgx,pk,practice}.jpg (1200×800, research.html 각 .research-item의 <figure class="research-image">). 01~05는 세로 목록이며 짝수 항목은 그림이 왼쪽.
 - 분야별 그림 스타일: 귀여운 3D 클레이 미니어처 일러스트(밝은 배경 위에 컴퓨터 화면의 분석 그래프 + 약 + 환자 안전 요소를 함께 배치). 사진 장면이나 추상 이미지는 쓰지 않는다. 사용자가 AI로 생성해 제공하며, 새로 필요하면 같은 스타일의 프롬프트를 작성해 준다.
+- Data & Analytical Approaches 카드 아이콘 images/approach-{claims,clinical,pv,genomic,evidence,datasci}.svg (64×64 색 채운 플랫 아이콘). 카드는 아이콘 + 구분 라벨(Data/Method) + 제목 + 설명 + 키워드 칩, 3열×2행, Method 카드는 윗선이 브론즈.
 - 모식도 스타일: 분야별 그림과 같은 3D 클레이 일러스트(Real-world data → Research → Patient care 흐름). 사용자가 AI로 생성해 제공한다. 모바일용 별도 그림은 만들지 않고 같은 그림을 축소 표시한다.
 - 색상: --main #174A45, --accent #B5844A, --gray #6F7774, --line #E3E7E5. 보조 틸 #2E6B64 #5E938B #A9C8C2 #DCEAE7 #F2F7F6, 보조 브론즈 #D9B98C #F3E7D6 #8C6334.
 
