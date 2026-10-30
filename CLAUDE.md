@@ -27,7 +27,7 @@
 
 ## 연구 모식도·일러스트
 - images/research-framework.svg (1400×620, research.html 소개글 아래와 index.html Research Areas 요약 블록의 <figure class="research-framework">).
-- 홈 상단 사진 images/home-hero.jpg (1103×793, 원본 사진의 오른쪽 모니터·책 부분을 잘라낸 실사 사진). index.html의 .hero-wrap 안 <figure class="hero-image">. 데스크톱(1101px 이상)은 왼쪽 글 + 오른쪽 48% 사진(왼쪽 경계만 흰색으로 흐림), 1100px 이하는 사진이 글 위로 올라간다. "PRECISE stands for"는 글 아래 가로 배치.
+- 홈 상단 사진 images/home-hero.jpg (원본 1983×793 그대로 사용 — 히어로 전체 폭에 깔리므로 1200px 규칙의 예외). index.html의 .hero-wrap 안 <figure class="hero-image">. 데스크톱(1101px 이상)은 사진이 히어로 아래쪽 전체 폭에 깔리고, 흰색 그라데이션으로 왼쪽(글 영역)은 흐린 워터마크·오른쪽은 선명하게 보인다. 1100px 이하는 사진이 글 위 띠로 올라간다. "PRECISE stands for"는 글 아래 가로 배치.
 - 분야별 그림 images/research-{pe,pv,pgx,pk,practice}.jpg (1200×800, research.html 각 .research-item의 <figure class="research-image">). 01~05는 세로 목록이며 짝수 항목은 그림이 왼쪽.
 - 분야별 그림 스타일: 귀여운 3D 클레이 미니어처 일러스트(밝은 배경 위에 컴퓨터 화면의 분석 그래프 + 약 + 환자 안전 요소를 함께 배치). 사진 장면이나 추상 이미지는 쓰지 않는다. 사용자가 AI로 생성해 제공하며, 새로 필요하면 같은 스타일의 프롬프트를 작성해 준다.
 - 모식도(research-framework.svg) 스타일: 색을 채운 플랫 일러스트. 텍스트 박스 위주나 얇은 선 아이콘 위주는 피한다. 모바일용 별도 그림은 만들지 않고 같은 그림을 축소 표시한다.
